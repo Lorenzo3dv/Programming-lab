@@ -7,6 +7,4 @@ def sum_csv(file_name):
             valori.append(float(elements[1]))
         somma = sum(valori)
     my_file.close()
-    return somma
-
-print (sum_csv('shampoo_sales.txt'))
+    print (somma)
