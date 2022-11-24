@@ -14,5 +14,3 @@ class CSVFile():
             if elements[1] != 'Sales\n':
                 my_list.append(elements)
         return my_list
-
-
