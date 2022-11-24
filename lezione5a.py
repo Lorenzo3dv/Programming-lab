@@ -1,6 +1,10 @@
 class CSVFile():
     def __init__(self, name):
         self.name = name
+        try:
+            open(name, 'r')
+        except FileNotFoundError:
+            print ('Errore, il file che si vuole usare non esiste.')
         
     def get_data(self):
         try:
