@@ -13,6 +13,3 @@ class CSVFile():
             return my_list
         except FileNotFoundError:
             print ('Errore, il file che si vuole usare non esiste.')
-
-file = CSVFile ('file')
-print (file.get_data())
