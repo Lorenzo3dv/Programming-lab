@@ -3,3 +3,5 @@ try:
     float(my_var)
 except ValueError:
     print ('errore')
+
+stringa = 'ciao'
