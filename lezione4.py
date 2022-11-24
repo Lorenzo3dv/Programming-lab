@@ -1,7 +1,7 @@
 class CSVFile():
     def __init__(self, name):
         self.name = name
-
+        
     def get_data(self):
         my_file = open(self.name)
         my_list = []
@@ -11,6 +11,6 @@ class CSVFile():
                 my_list.append(elements)
         return my_list
 
-file = CSVFile('shampoo_sales.cv')
+file = CSVFile('shampoo_sales.sv')
 print (file.name)
 print (file.get_data())
