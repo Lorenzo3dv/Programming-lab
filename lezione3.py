@@ -7,5 +7,3 @@ def sum_csv(file_name):
             numeri = float(elements[1])
             somma +=numeri
     return somma
-        
-print (sum_csv('shampoo_sales.csv'))
