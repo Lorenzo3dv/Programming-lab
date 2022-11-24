@@ -1,6 +1,10 @@
 class CSVFile():
     def __init__(self, name):
         self.name = name
+        try:
+            my_file = open(name)
+        except FileNotFoundError:
+            print ('Errore, il file che si sta usando non esiste.')
 
     def get_data(self):
         my_file = open(self.name)
@@ -11,6 +15,4 @@ class CSVFile():
                 my_list.append(elements)
         return my_list
 
-file = CSVFile('shampoo_sales.cv')
-print (file.name)
-print (file.get_data())
+
