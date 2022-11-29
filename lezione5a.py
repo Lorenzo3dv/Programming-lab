@@ -5,14 +5,16 @@ class CSVFile():
         try:
             my_file = open(self.name, 'r')
             my_file.readline()
-        except Exception:
+        except Exception as e:
             self.can_read = False 
-            print ('Errore, non esiste il file')
+            print ('Errore in apertura del file:"{}"'.format(e))
         
     def get_data(self):
         if not self.can_read:
             print ('Errore, non esiste il file')
+            
             return None
+            
         else: 
             my_file = open(self.name)
             my_list = []
