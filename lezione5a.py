@@ -12,14 +12,13 @@ class CSVFile():
     def get_data(self):
         if not self.can_read:
             print ('Errore, non esiste il file')
-            return None
-            
+            return None  
         else: 
             my_file = open(self.name)
             my_list = []
             for line in my_file:
                 elements = line.split(',')
-                if elements[0] != 'Date':
+                if elements[1] != 'Sales\n':
                     my_list.append(elements)
-                my_file.close()
+            my_file.close()
             return my_list
