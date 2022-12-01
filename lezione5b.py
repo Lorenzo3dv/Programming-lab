@@ -10,8 +10,9 @@ class CSVFile():
             print ('Errore in apertura del file:"{}"'.format(e))
         
     def get_data(self):
-        if not self.can_read:
+        if self.can_read != True:
             print ('Errore, non esiste il file')
+            
             return None
             
         else: 
@@ -23,4 +24,9 @@ class CSVFile():
                     my_list.append(elements)
             return my_list
 
-file = CSVFile('file')
+
+class NumericalCSVFile (CSVFile):
+    lista_dati = super().get_data()
+    lista_valori = []
+    
+    
