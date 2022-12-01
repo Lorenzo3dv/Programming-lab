@@ -19,8 +19,7 @@ class CSVFile():
             my_list = []
             for line in my_file:
                 elements = line.split(',')
-                if elements[1] != 'Sales\n':
+                if elements[0] != 'Date':
                     my_list.append(elements)
+                my_file.close()
             return my_list
-
-file = CSVFile('file')
